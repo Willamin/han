@@ -1,24 +1,38 @@
-# README
+# han
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+_A personal tool for keeping track of solo projects_
 
-Things you may want to cover:
+## purpose
 
-* Ruby version
+Han provides a central location to keep track of personal projects.
+It allows the user to input new project ideas, list projects, adjust the status of projects, hold meta project information, and generate a public-facing dashboard/directory.
 
-* System dependencies
+## design
+```domo
+User.name : String
+User.email : String
+User.projects : Array(Project)
 
-* Configuration
+Project.user : User
+Project.name : String
+Project.stage : Stage
+Project.source_link : String
+Project.homepage_link : String
+Project.description : String
+Project.tasks : Array(Tasks)
 
-* Database creation
+Task.project : Project
+Task.description : String
+Task.status : Status
 
-* Database initialization
+Stage : Inbox | Unreleased | Active | Backburner | Archived
+Status : Inbox | In Progress | Finished | Backburner | Archived
+```
 
-* How to run the test suite
+## local development
+```
+git clone git@github.com:Willamin/han.git
+bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rails s
+```
