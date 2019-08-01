@@ -10,6 +10,13 @@
   </head>
 
   <body>
+    <% unless flash.empty? %>
+    <ul>
+    <% flash.each do |f| %>
+      <li><%= f[0] %>: <%= f[1] %></li>
+    <% end %>
+    </ul>
+    <% end %>
     <%= yield %>
   </body>
 </html>
