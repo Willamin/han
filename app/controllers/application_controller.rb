@@ -9,4 +9,9 @@ class ApplicationController < ActionController::Base
 	def logged_in?
 		false
 	end
+
+	helper_method :totp
+	def totp
+		@totp ||= ROTP::TOTP.new(Rails.configuration.x.totp.seed, issuer: "Han")
+	end
 end
