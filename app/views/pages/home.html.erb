@@ -1,3 +1,12 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 <%= totp.provisioning_uri("han@han.com") %>
+
+<%= form_tag "/sessions/create" do %>
+
+<form method="post" action="/sessions/create">
+	<label for="totp">Time Based Passcode</label>
+	<input name="totp" id="totp" />
+
+	<input type="submit"/>
+<% end %>
