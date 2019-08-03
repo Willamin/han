@@ -1,0 +1,14 @@
+AllCops:
+  Include:
+    - 'app/**/*.rb'
+    - 'lib/**/*.rb'
+    - 'spec/**/*.rb'
+    - Gemfile
+    - config.ru
+  Exclude:
+    - 'node_modules/**/*'
+    - 'bin/**/*'
+    - 'db/migrate/*'
+    - 'db/schema.rb'
+    - 'config/**/*'
+    - 'vendor/**/*'
