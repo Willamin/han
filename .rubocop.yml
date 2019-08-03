@@ -12,3 +12,6 @@ AllCops:
     - 'db/schema.rb'
     - 'config/**/*'
     - 'vendor/**/*'
+
+Style/Documentation:
+  Enabled: false
