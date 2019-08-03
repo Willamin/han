@@ -29,6 +29,10 @@ Stage : Inbox | Unreleased | Active | Backburner | Archived
 Status : Inbox | In Progress | Finished | Backburner | Archived
 ```
 
+## style guide
+
+Despite it not matching standard Ruby style, this project will primarily use Tab-based indentation. That means that any pull requests that have spaces to the left of the left-most non-whitespace character will not be merged in.
+
 ## local development
 ```
 git clone git@github.com:Willamin/han.git
