@@ -15,7 +15,8 @@ class ApplicationController < ActionController::Base
 		@totp ||= ROTP::TOTP.new(Rails.configuration.x.totp.seed, issuer: "Han")
 	end
 
-	def authenticate(attempt)
-		totp.verify(attempt)
+	def authenticate(username, password)
+		return false unless username == Rails.configuration.x.username
+		totp.verify(password)
 	end
 end

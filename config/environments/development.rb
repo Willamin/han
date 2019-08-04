@@ -59,5 +59,6 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+  config.x.username = "dev"
   config.x.totp.seed = "H4W7BXPVU6MIPNVYBWTI3IWPIO65YWEW"
 end

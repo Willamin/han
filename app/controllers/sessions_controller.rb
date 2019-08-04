@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 	def create
-		if authenticate(params[:totp])
+		if authenticate(params[:name], params[:password])
 			session[:logged_in] = true
 			redirect_to '/secret-test'
 		else
@@ -11,5 +11,7 @@ class SessionsController < ApplicationController
 
 	def destroy
 		session[:logged_in] = nil
+		flash[:info] = "Successfully logged out"
+		redirect_to '/'
 	end
 end

@@ -6,8 +6,10 @@
 <%= form_tag "/sessions/create" do %>
 
 <form method="post" action="/sessions/create">
-	<label for="totp">Time Based Passcode</label>
-	<input name="totp" id="totp" />
+	<label for="name">Name</label>
+	<input name="name" id="name" />
+	<label for="password">Password</label>
+	<input name="password" id="password" />
 
 	<input type="submit"/>
 <% end %>
