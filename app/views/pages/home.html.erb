@@ -1,15 +1,19 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
-<a href="<%= @totp_uri %>"><%= @svg %></a>
-
 <%= form_tag "/sessions/create" do %>
 
 <form method="post" action="/sessions/create">
-	<label for="name">Name</label>
-	<input name="name" id="name" />
-	<label for="password">Password</label>
-	<input name="password" id="password" />
+	<div class="flex">
+		<label for="name">Name</label>
+		<input name="name" id="name" />
+	</div>
+	<div class="flex">
+		<label for="password">Password</label>
+		<input name="password" id="password" />
+	</div>
 
-	<input type="submit"/>
+	<div class="flex">
+		<input type="submit"/>
+	</div>
 <% end %>

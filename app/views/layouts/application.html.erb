@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Han</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+	<head>
+		<title>Han</title>
+		<%= csrf_meta_tags %>
+		<%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-  </head>
+		<%= stylesheet_link_tag 'application', media: 'all' %>
+		<%= javascript_include_tag 'application' %>
+	</head>
 
-  <body>
-    <% unless flash.empty? %>
-    <ul>
-    <% flash.each do |f| %>
-      <li><%= f[0] %>: <%= f[1] %></li>
-    <% end %>
-    </ul>
-    <% end %>
-    <%= yield %>
-  </body>
+	<body>
+		<main class="center">
+			<div class="container">
+				<% unless flash.empty? %>
+				<ul>
+				<% flash.each do |f| %>
+					<li><%= f[0] %>: <%= f[1] %></li>
+				<% end %>
+				</ul>
+				<% end %>
+				<%= yield %>
+			</div>
+		</div>
+	</body>
 </html>
