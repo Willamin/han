@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
 	get '/projects', to: 'projects#index'
 	post '/projects/create', to: 'projects#create'
+	delete '/projects/destroy', to: 'projects#destroy'
 end

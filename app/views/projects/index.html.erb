@@ -2,8 +2,6 @@
 <h2>Projects#index</h2>
 
 
-<%= form_tag "/projects/create" do %>
-<form method="post" action="/projects/create">
 <table class="projects_index_table">
 	<thead>
 		<tr>
@@ -15,17 +13,20 @@
 		<% @projects.each do |project| %>
 		<tr>
 			<td><%= project.name %></td>
-			<td></td>
+			<td><%= button_to "delete", {:controller => :projects, :action => 'destroy', :name => project.name }, :method => :delete %></td>
 		</tr>
 		<% end %>
-		<tr>
-			<td>
-				<input name="name" id="name" />
-			</td>
-			<td>
-				<input type="submit"/>
-			</td>
-		</tr>
+		<%= form_tag "/projects/create" do %>
+		<form method="post" action="/projects/create">
+			<tr>
+				<td>
+					<input name="name" id="name" />
+				</td>
+				<td>
+					<input type="submit"/>
+				</td>
+			</tr>
+		</form>
 	</tbody>
 <% end %>
 
