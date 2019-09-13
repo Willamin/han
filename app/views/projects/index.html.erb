@@ -13,7 +13,14 @@
 		<% @projects.each do |project| %>
 		<tr>
 			<td><%= project.name %></td>
-			<td><%= button_to "delete", {:controller => :projects, :action => 'destroy', :name => project.name }, :method => :delete %></td>
+			<td>
+				<%= button_to(
+						"delete",
+						{ controller: :projects, action: "destroy", name: project.name },
+						method: :delete
+					)
+				%>
+			</td>
 		</tr>
 		<% end %>
 		<%= form_tag "/projects/create" do %>
