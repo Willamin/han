@@ -39,3 +39,12 @@ html, body {
 	display: flex;
 	justify-content: space-between;
 }
+
+.projects_index_table, .projects_index_table tbody td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.projects_index_table thead {
+	border: 1px solid transparent;
+}

@@ -17,3 +17,12 @@
 		<input type="submit"/>
 	</div>
 <% end %>
+
+<div>
+	<% Project.all.each do |project| %>
+		<div>
+			<h3><%= project.name %></h3>
+			<%= project.description %>
+		</div>
+	<% end %>
+</div>

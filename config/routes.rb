@@ -5,4 +5,7 @@ Rails.application.routes.draw do
 
 	get '/', to: 'pages#home'
 	get '/secret-test', to: 'pages#secret_test'
+
+	get '/projects', to: 'projects#index'
+	post '/projects/create', to: 'projects#create'
 end
