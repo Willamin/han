@@ -18,11 +18,12 @@
 	</div>
 <% end %>
 
+<h2>Projects</h2>
 <div>
 	<% Project.all.each do |project| %>
-		<div>
-			<h3><%= project.name %></h3>
-			<%= project.description %>
+		<div class="project_box">
+			<div><%= project.name %></div>
+			<div><%= project.description %></div>
 		</div>
 	<% end %>
 </div>

@@ -48,3 +48,13 @@ html, body {
 .projects_index_table thead {
 	border: 1px solid transparent;
 }
+
+h1, h2, h3, h4, h5, h6 {
+	border-bottom: 1px solid black;
+}
+
+.project_box {
+	border: 1px solid black;
+	padding: 1em;
+	margin: 1em;
+}

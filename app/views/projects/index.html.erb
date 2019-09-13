@@ -12,7 +12,14 @@
 	<tbody>
 		<% @projects.each do |project| %>
 		<tr>
-			<td><%= project.name %></td>
+			<%= form_tag "/projects/edit_name" do %>
+			<input type="hidden" name="old_name" id="old_name" value="<%= project.name %>"/>
+			<td><input name="new_name" id="new_name" value="<%= project.name %>"/></td>
+			<td>
+				<input type="submit" value="update name"/>
+			</td>
+			</form>
+			<% end %>
 			<td>
 				<%= button_to(
 						"delete",
@@ -27,14 +34,13 @@
 		<form method="post" action="/projects/create">
 			<tr>
 				<td>
-					<input name="name" id="name" />
+					<input name="name" id="name" autofocus="true" />
 				</td>
 				<td>
 					<input type="submit"/>
 				</td>
 			</tr>
 		</form>
+		<% end %>
 	</tbody>
-<% end %>
-
 </table>

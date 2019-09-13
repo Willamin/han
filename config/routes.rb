@@ -9,4 +9,5 @@ Rails.application.routes.draw do
 	get '/projects', to: 'projects#index'
 	post '/projects/create', to: 'projects#create'
 	delete '/projects/destroy', to: 'projects#destroy'
+	post '/projects/edit_name', to: 'projects#edit_name'
 end
