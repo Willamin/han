@@ -7,5 +7,5 @@ class PagesController < ApplicationController
 		@svg = qrcode.as_svg(module_size: 4).html_safe
 	end
 
-	def secret_test; end
+	def overview; end
 end
