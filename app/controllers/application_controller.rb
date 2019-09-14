@@ -18,6 +18,7 @@ class ApplicationController < ActionController::Base
 
 	def authenticate(username, password)
 		return false unless username == Rails.configuration.x.username
+		return true if Rails.env.development?
 		totp.verify(password)
 	end
 end
