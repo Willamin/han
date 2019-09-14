@@ -1,0 +1,14 @@
+<%= form_tag "/sessions/create", class: "padded-text" do %>
+	<div class="flex">
+		<label for="name">Name</label>
+		<input name="name" id="name" />
+	</div>
+	<div class="flex">
+		<label for="password">Password</label>
+		<input type="password" name="password" id="password" />
+	</div>
+
+	<div class="flex">
+		<input type="submit"/>
+	</div>
+<% end %>

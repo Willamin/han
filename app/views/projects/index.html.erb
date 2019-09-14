@@ -1,5 +1,7 @@
-<h1>Han / Projects</h1>
-<p class="padded-text">Adjust the projects here or return to the <%= link_to "Overview", overview_path %></p>
+<% content_for :title, "Han / Projects" %>
+<% content_for :links do %>
+	Adjust the projects here or return to the <%= link_to "Overview", overview_path %>
+<% end %>
 
 <table class="projects_index_table">
 	<thead>
