@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
 		redirect_to :root
 	end
 
+	helper_method :logged_in?
 	def logged_in?
 		session[:logged_in]
 	end
