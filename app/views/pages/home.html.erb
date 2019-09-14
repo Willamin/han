@@ -2,7 +2,7 @@
 <p>A personal tool for keeping track of solo projects</p>
 
 <% if logged_in? %>
-	<p>You're logged in, so you might be interested in the <%= link_to "Overview", overview_path %>.</p>
+	<p>You're logged in, so you might be interested in the <%= link_to "Overview", overview_path %> or <%= link_to "Logging out", sessions_destroy_path %>.</p>
 <% else %>
 	<%= form_tag "/sessions/create" do %>
 	<form method="post" action="/sessions/create">
