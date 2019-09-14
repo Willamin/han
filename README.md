@@ -40,3 +40,7 @@ bundle install
 
 rails s
 ```
+
+## visual style guide
+
+Take color inspiration from this base color [#76C0E0](https://convertingcolors.com/hsl-color-198_63_67.html).
