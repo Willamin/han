@@ -32,7 +32,7 @@ html, body {
 }
 
 .container {
-	max-width: 480px;
+	width: 480px;
 }
 
 .flex {
@@ -45,13 +45,34 @@ html, body {
 	border-collapse: collapse;
 }
 
+.projects_index_table tbody td input {
+	width: 100%;
+	box-sizing: border-box;
+}
+
 .projects_index_table thead {
 	border: 1px solid transparent;
+}
+
+.projects_index_table {
+	margin-left: 10px;
+	margin-right: 10px;
+	width: calc(100% - 20px);
+}
+
+.projects_index_table input[type=submit] {
+	width: 100px;
+	line-height: 1.6em;
+}
+
+.projects_index_table td:first-child {
+    width:100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	border-bottom: 1px solid black;
 	line-height: 1.6em;
+	padding-left: 10px;
 }
 
 li {
@@ -62,6 +83,7 @@ li {
 	border: 1px solid black;
 	padding: 1em;
 	margin: 1em;
+	padding-left: 10px;
 }
 
 a {
@@ -76,6 +98,10 @@ a {
 a:hover {
 	background-color: #76C0E0AA;
 	border-color: #6B7A80AA;
+}
+
+.padded-text {
+	padding-left: 10px;
 }
 
 .flash-success {
