@@ -19,7 +19,7 @@ class ProjectsController < ApplicationController
 		@project = Project.find_by(name: old_name)
 		@project.name = new_name
 		@project.save
-		flash[:success] = "Successfully created #{@project.name}"
+		flash[:success] = "Successfully renamed #{old_name} to #{@project.name}"
 		redirect_to "/projects"
 	end
 

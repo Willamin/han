@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
 	def create
 		if authenticate(params[:name], params[:password])
 			session[:logged_in] = true
+			flash[:success] = "Successfully logged in"
 			redirect_to '/overview'
 		else
 			flash[:error] = "Failed to sign in"

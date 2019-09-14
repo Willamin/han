@@ -51,6 +51,11 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
 	border-bottom: 1px solid black;
+	line-height: 1.6em;
+}
+
+li {
+	list-style: none;
 }
 
 .project_box {
@@ -71,4 +76,28 @@ a {
 a:hover {
 	background-color: #76C0E0AA;
 	border-color: #6B7A80AA;
+}
+
+.flash-success {
+	line-height: 1.6em;
+	padding: 0.05em 0.2em;
+	border-radius: 3px;
+	background-color: #A5D5ABAA;
+	border: 1px solid #758077AA;;
+}
+
+.flash-error {
+	line-height: 1.6em;
+	padding: 0.05em 0.2em;
+	border-radius: 3px;
+	background-color: #FFB7B3AA;
+	border: 1px solid #807271AA;;
+}
+
+.flash-info {
+	line-height: 1.6em;
+	padding: 0.05em 0.2em;
+	border-radius: 3px;
+	background-color: #C8C3F9AA;
+	border: 1px solid #767580AA;;
 }
