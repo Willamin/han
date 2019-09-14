@@ -12,14 +12,16 @@
 	<body>
 		<main class="center">
 			<div class="container">
-				<ul>
-					<% if Rails.env.development? %>
-						<li><span class="flash-info">info</span> Current environment is dev.</li>
-					<% end %>
-				<% flash.each do |f| %>
-					<li><span class="flash-<%=f[0]%>"><%= f[0] %></span> <%= f[1] %></li>
+				<% if !flash.empty? || Rails.env.development? %>
+					<ul>
+						<% if Rails.env.development? %>
+							<li><span class="flash-info">info</span> Current environment is dev.</li>
+						<% end %>
+						<% flash.each do |f| %>
+							<li><span class="flash-<%=f[0]%>"><%= f[0] %></span> <%= f[1] %></li>
+						<% end %>
+					</ul>
 				<% end %>
-				</ul>
 				<%= yield %>
 			</div>
 		</div>
