@@ -74,6 +74,12 @@ h1, h2, h3, h4, h5, h6 {
 	border-bottom: 1px solid black;
 	line-height: 1.6em;
 	padding-left: 10px;
+	padding-right: 10px;
+}
+
+ul {
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 li {
@@ -113,6 +119,7 @@ a:hover {
 
 .padded-text {
 	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .flash-success {

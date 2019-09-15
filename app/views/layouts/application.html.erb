@@ -13,17 +13,19 @@
 	<body>
 		<main class="center">
 			<div class="container">
+				<h1><%= yield :title || "Han" %></h1>
+
 				<% if !flash.empty? || Rails.env.development? %>
 					<ul>
 						<% if Rails.env.development? %>
-							<li><span class="flash-info">info</span> Current environment is dev.</li>
+							<li><span class="flash-info">info:</span> Current environment is dev.</li>
 						<% end %>
 						<% flash.each do |f| %>
-							<li><span class="flash-<%=f[0]%>"><%= f[0] %></span> <%= f[1] %></li>
+							<li><span class="flash-<%=f[0]%>"><%= f[0] %>:</span> <%= f[1] %></li>
 						<% end %>
 					</ul>
 				<% end %>
-				<h1><%= yield :title || "Han" %></h1>
+
 				<% links_p = yield :links %>
 				<% unless links_p.empty? %>
 					<p class="padded-text">
