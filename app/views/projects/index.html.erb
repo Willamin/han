@@ -12,36 +12,53 @@
 	</thead>
 	<tbody>
 		<% @projects.each do |project| %>
-		<tr>
-			<%= form_tag "/projects/edit_name" do %>
-			<input type="hidden" name="old_name" id="old_name" value="<%= project.name %>"/>
-			<td><input name="new_name" id="new_name" value="<%= project.name %>"/></td>
-			<td>
-				<input type="submit" value="update name"/>
-			</td>
-			</form>
-			<% end %>
-			<td>
-				<%= button_to(
-						"delete",
-						{ controller: :projects, action: "destroy", name: project.name },
-						method: :delete
-					)
-				%>
-			</td>
-		</tr>
-		<% end %>
-		<%= form_tag "/projects/create" do %>
-		<form method="post" action="/projects/create">
 			<tr>
 				<td>
-					<input name="name" id="name" autofocus="true" />
+					<details class="modal">
+						<summary></summary>
+						<h2>Update</h2>
+						<%= form_tag "/projects/edit" do %>
+							<input type="hidden" name="old_name" id="<%= project.name %>-old_name" value="<%= project.name %>"/>
+
+							<div class="flex">
+								<label for="<%= project.name %>-new_name">Name: </label>
+								<input name="new_name" id="<%= project.name %>-new_name" value="<%= project.name %>"/>
+							</div>
+							<div class="flex">
+								<label for="<%= project.name %>-description">Description: </label>
+								<textarea name="description" id="<%= project.name %>-description"><%= project.description %></textarea>
+							</div>
+
+							<div class="flex">
+								<input type="submit" value="update project"/>
+							</div>
+						<% end %>
+					</details>
 				</td>
+				<%= form_tag "/projects/edit_name" do %>
+					<input type="hidden" name="old_name" id="old_name" value="<%= project.name %>"/>
+					<td><input name="new_name" id="new_name" value="<%= project.name %>"/></td>
+					<td><input type="submit" value="update name"/></td>
+				<% end %>
 				<td>
-					<input type="submit"/>
+					<%= button_to(
+							"delete",
+							{ controller: :projects, action: "destroy", name: project.name },
+							method: :delete
+						)
+					%>
 				</td>
 			</tr>
-		</form>
+		<% end %>
+
+		<%= form_tag "/projects/create" do %>
+			<form method="post" action="/projects/create">
+				<tr>
+					<td></td>
+					<td><input name="name" id="name" autofocus="true" /></td>
+					<td><input type="submit"/></td>
+				</tr>
+			</form>
 		<% end %>
 	</tbody>
 </table>

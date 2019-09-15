@@ -23,6 +23,19 @@ class ProjectsController < ApplicationController
 		redirect_to "/projects"
 	end
 
+	def edit
+		old_name = params[:old_name]
+		new_name = params[:new_name]
+		description = params[:description]
+		@project = Project.find_by(name: old_name)
+		@project.name = new_name
+		@project.description = description
+		@project.save
+
+		flash[:success] = "Successfully updated #{@project.name} (previously known as #{old_name})"
+		redirect_to "/projects"
+	end
+
 	def destroy
 		name = params[:name]
 		@project = Project.find_by(name: name)

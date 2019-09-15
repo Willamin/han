@@ -10,4 +10,5 @@ Rails.application.routes.draw do
 	post '/projects/create', to: 'projects#create'
 	delete '/projects/destroy', to: 'projects#destroy'
 	post '/projects/edit_name', to: 'projects#edit_name'
+	post '/projects/edit', to: 'projects#edit'
 end
