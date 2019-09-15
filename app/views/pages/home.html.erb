@@ -15,7 +15,7 @@
 
 <h2>Projects</h2>
 <div>
-	<% Project.all.each do |project| %>
+	<% Project.order(:created_at).each do |project| %>
 		<%= render 'project_card', project: project %>
 	<% end %>
 </div>

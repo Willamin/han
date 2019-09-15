@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
 	before_action :require_login
 
 	def index
-		@projects = Project.all
+		@projects = Project.order(:created_at)
 	end
 
 	def create
