@@ -1,4 +1,5 @@
-<%= form_tag "/sessions/create", class: "padded-text" do %>
+<%= link_to "🔒", "#login", class: "absolute-top-right" %>
+<%= form_tag "/sessions/create", class: "padded-text hash-hide", id: "login" do %>
 	<div class="flex">
 		<label for="name">Name</label>
 		<input name="name" id="name" />
