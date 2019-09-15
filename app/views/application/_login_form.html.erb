@@ -1,15 +1,18 @@
 <%= link_to "🔒", "#login", class: "absolute-top-right" %>
-<%= form_tag "/sessions/create", class: "padded-text hash-hide", id: "login" do %>
-	<div class="flex">
-		<label for="name">Name</label>
-		<input name="name" id="name" />
-	</div>
-	<div class="flex">
-		<label for="password">Password</label>
-		<input type="password" name="password" id="password" />
-	</div>
+<%= form_tag "/sessions/create", class: "hash-hide", id: "login" do %>
+	<h2>Login</h2>
+	<div class="padded-text">
+		<div class="flex">
+			<label for="name">Name</label>
+			<input name="name" id="name" />
+		</div>
+		<div class="flex">
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password" />
+		</div>
 
-	<div class="flex">
-		<input type="submit"/>
+		<div class="flex">
+			<input type="submit"/>
+		</div>
 	</div>
 <% end %>
