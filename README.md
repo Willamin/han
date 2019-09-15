@@ -9,11 +9,6 @@ It allows the user to input new project ideas, list projects, adjust the status 
 
 ## design
 ```domo
-User.name : String
-User.email : String
-User.projects : Array(Project)
-
-Project.user : User
 Project.name : String
 Project.stage : Stage
 Project.source_link : String
